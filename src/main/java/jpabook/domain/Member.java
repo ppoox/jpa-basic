@@ -1,6 +1,7 @@
 package jpabook.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -19,9 +20,8 @@ public class Member {
 
     private String zipcode;
 
-    @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders;
 
     public Long getId() {
         return id;
@@ -61,13 +61,5 @@ public class Member {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Team getTeam() {
-        return team;
-    }
-
-    public void setTeam(Team team) {
-        this.team = team;
     }
 }
