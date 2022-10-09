@@ -10,7 +10,8 @@ public class Member {
     @Column(name = "MEMBER_ID")
     private Long id;
 
-    private String name;
+    @Column(name = "USERNAME")
+    private String username;
 
     private String city;
 
@@ -18,20 +19,16 @@ public class Member {
 
     private String zipcode;
 
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getCity() {
@@ -56,5 +53,21 @@ public class Member {
 
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
