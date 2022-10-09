@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.ppoox'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.hibernate:hibernate-entitymanager:5.3.10.Final'
+    implementation 'com.h2database:h2:2.1.214'
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
