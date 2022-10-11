@@ -1,7 +1,6 @@
 package jpabook;
 
-import jpabook.domain.Member;
-import jpabook.domain.Team;
+import jpabook.domain.Book;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,6 +17,11 @@ public class JpaMain {
 
         try {
 
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("테스트 ");
+
+            em.persist(book);
 
             tx.commit();
         } catch (Exception e) {

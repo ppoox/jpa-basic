@@ -9,7 +9,10 @@
         <class>jpabook.domain.OrderItem</class>
         <class>jpabook.domain.Delivery</class>
         <class>jpabook.domain.Category</class>
-        <class>jpabook.domain.Teamm</class>
+        <class>jpabook.domain.Team</class>
+        <class>jpabook.domain.Movie</class>
+        <class>jpabook.domain.Album</class>
+        <class>jpabook.domain.Book</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
